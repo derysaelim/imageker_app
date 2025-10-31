@@ -58,8 +58,14 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> {
                     fontWeight: FontWeight.bold,
                     fontSize: 16),
               ),
-              onPressed: () {
-                // requestPermission(permission: Platform.isAndroid ? Permission.storage : Permission.photos);
+              onPressed: () async {
+                var status = await Permission.storage.request();
+                if(status.isDenied) {
+                  await Permission.storage.request();
+                } else if(status.isPermanentlyDenied) {
+                  openAppSettings();
+                }
+    
                 _pickImageFromGallery();
               }),
           ],
