@@ -1,16 +1,40 @@
-# imageker_app
+# Imageker App
 
-A new Flutter project.
+A simple Image Picker application
 
-## Getting Started
+## How to Run the Application
 
-This project is a starting point for a Flutter application.
+Follow these quick steps to get the application running on your device:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone the Repository:
+```bash
+  git clone https://github.com/derysaelim/imageker_app/
+```
+2. Enter the Project Directory:
+```bash
+  cd imageker_app
+```
+3. Install Dependencies:
+```bash
+  flutter pub get
+```
+4. Run Application
+```bash
+  flutter run
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Packages Used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project relies on two core Flutter community packages to handle the main functionalities:
+
+- image_picker:
+
+Function: Used to interact with the device's gallery (or camera), allowing the user to select an image file.
+
+Version Used: 1.2.0
+
+- permission_handler:
+
+Function: Used to fully handle the runtime permission flow (Android & iOS). This package is responsible for checking permission status, requesting permission from the user, and redirecting the user to App Settings if permission is permanently denied.
+
+Version Used: 12.0.1
